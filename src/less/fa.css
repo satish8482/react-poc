@@ -1,0 +1,10 @@
+a .fa:hover,
+a.fa:hover {
+  text-decoration: none;
+}
+.fa-left {
+  margin-right: 0.5em;
+}
+.fa-right {
+  margin-left: 0.5em;
+}

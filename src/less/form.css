@@ -1,0 +1,7 @@
+.form-group.required label {
+  font-weight: bold;
+}
+.form-group.error label,
+.form-group.error .help {
+  color: #a94442;
+}

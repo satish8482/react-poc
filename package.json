@@ -1,0 +1,32 @@
+{
+  "name": "my-react-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "build-css": "less-watch-compiler --run-once --main-file=index.less src/less/ src/less/",
+    "ramda": "^0.25.0",
+    "react": "^16.2.0",
+    "react-document-title": "^2.0.3",
+    "react-dom": "^16.2.0",
+    "react-responsive-carousel": "^3.1.33",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "watch-css": "npm run build-css && less-watch-compiler --main-file=index.less src/less/ src/less/"
+  },
+  "scripts": {
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-css": "node-less-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-less-chokidar src/ -o src/ --watch --recursive"
+  },
+  "devDependencies": {
+    "less-watch-compiler": "^1.11.0",
+    "node-less-chokidar": "^0.1.2",
+    "npm-run-all": "^4.1.2"
+  }
+}

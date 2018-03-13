@@ -1,0 +1,23 @@
+.effect.brackets a::before,
+.effect.brackets a::after {
+  display: inline-block;
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.2s;
+}
+.effect.brackets a::before {
+  margin-right: 10px;
+  content: '[';
+  transform: translateX(20px);
+}
+.effect.brackets a::after {
+  margin-left: 10px;
+  content: ']';
+  transform: translateX(-20px);
+}
+.effect.brackets a:hover::before,
+.effect.brackets a:hover::after,
+.effect.brackets a:focus::before,
+.effect.brackets a:focus::after {
+  opacity: 1;
+  transform: translateX(0px);
+}
