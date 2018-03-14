@@ -19,9 +19,16 @@ import venuefive from "./images/venuefive.png"
 import venuesix from "./images/venuesix.png"
 import leftarrow from "./images/leftarrow.png"
 import rightarrow from "./images/rightarrow.png"
+import bdayhall from "./images/Birthdayhall.png"
+import phall from "./images/partyhall.png"
+import djhall from "./images/djhalls.png"
+import wedhall from "./images/weddinghall.png"
+import annualhall from "./images/annualdinners.png"
+import partyhall from "./images/partyhall.png"
 import logo from "./images/logo.png"
+import footerimg from "./images/footerimg.png"
+import services from "./images/services-sprite.png"
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-//import Theme from "./less/theme.less"
 import "./App.css";
 
 const JSON = {
@@ -70,7 +77,40 @@ image4: {
     headingthree:'The Siddiqua function hall  ',
     addressthree:'Dehli',
     venuethree:<img src={venuesix} width="300" height="220"/>
-  }
+  },
+  image11:{
+   
+    hallsone:<img src={bdayhall} width="300" height="220"/>,
+    details:''
+  },
+  image12:{
+    
+    hallsone:<img src={partyhall} width="300" height="220"/>,
+    details:''
+  },
+  image13:{
+    
+     hallstwo:<img src={djhall} width="300" height="220"/>,
+     details2:''
+   },
+   image14:{
+     
+     hallstwo:<img src={annualhall} width="300" height="220"/>,
+     details2:''
+   },
+   image15:{
+    
+     hallsthree:<img src={wedhall} width="300" height="220"/>,
+     details3:''
+   },
+   image16:{
+     
+     hallsthree:<img src={phall} width="300" height="220"/>,
+     details3:''
+   },
+   image17:{
+     popularservice:<img src={services} width="90%" height="100%"/> 
+   }
 };
 
 
@@ -79,7 +119,15 @@ export default class App extends Component {
     return (
       <div >
       <Menu></Menu>
-      <header className="App-header" ><img src={logo} height="80%"/></header>
+      <header className="App-header" ><img className="marginclass" src={logo} height="80%"/>
+      <div id = "header">
+       <ul>
+        <li><a className="anchor" href="#">VENUE</a></li>
+        <li><a href="#">Add venue</a></li>
+        <li><a href="#">Login</a></li>
+     </ul> 
+   </div>  
+      </header>
       <DocumentTitle title="React Ultimate :: About">
         
         <TextHolder>
@@ -105,7 +153,7 @@ export default class App extends Component {
 
           <div className="col-4" >
         {Object.keys(JSON).map(key => (
-          <div >
+          <div align="center" >
              {JSON[key].venueone} 
              <p>{JSON[key].heading}</p><p>{JSON[key].address}</p>
               </div>
@@ -114,7 +162,7 @@ export default class App extends Component {
 
           <div className="col-4">
         {Object.keys(JSON).map(key => (
-          <div >
+          <div align="center">
              {JSON[key].venuetwo} 
              <p>{JSON[key].headingtwo}</p><p>{JSON[key].addresstwo}</p>
               </div>
@@ -122,7 +170,7 @@ export default class App extends Component {
           </div>
           <div className="col-4">
         {Object.keys(JSON).map(key => (
-         <div >
+         <div align="center">
              {JSON[key].venuethree} 
              <p>{JSON[key].headingthree}</p><p>{JSON[key].addressthree}</p>
               </div>
@@ -130,10 +178,59 @@ export default class App extends Component {
           </div>
           </div>
      </div>
+     <div className="hallclass">
+     <div className="row">
+       <div className="col-4">
+         {Object.keys(JSON).map(key=>(
+           <div align="center">
+              {JSON[key].hallsone}
+              <p>{JSON[key].details}</p>
+              </div>
+         ))}
+           </div>
+       <div className="col-4">
+       {Object.keys(JSON).map(key=>(
+           <div align="center">
+              {JSON[key].hallstwo}
+              <p>{JSON[key].details2}</p>
+              </div>
+         ))}
        </div>
+       <div className="col-4">
+       {Object.keys(JSON).map(key=>(
+           <div align="center">
+              {JSON[key].hallsthree}
+              <p>{JSON[key].details3}</p>
+              </div>
+         ))}
+       </div>
+     </div>
+     </div>
+     <center>
+     <h3>Popular Services</h3>
+     </center>
+     <div className="popularserviceclass">
+       {Object.keys(JSON).map(key=>(
+         <div align="center">
+           {JSON[key].popularservice}
+         </div>
+       ))}
+       </div>
+       </div>
+       
 </TextHolder>
  </DocumentTitle>
+
+ <footer >
+   <div >
+<img src={footerimg} width="100%" height="60%"/>
+<div className="footerclass"><p  align="center">Copyright @2017 |  Venefly All rights reserved</p></div>
+</div>
+
+ 
+     </footer>
     </div>
+    
     )
   }
 }
