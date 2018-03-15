@@ -26,6 +26,9 @@ anchor{
   padding: 120px;
   margin: 42px;
 }
+sectionclass{
+  background-color: 
+}
 
 ul {
   text-align: right;
@@ -87,7 +90,9 @@ ul li:last-child{
   font-size: 1.5em;
 }
 
-
+.sectionclass{
+background-color: #0C1123;
+}
 
 .App-intro {
   font-size: large;
