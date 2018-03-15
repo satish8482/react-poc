@@ -223,20 +223,7 @@ export default class App extends Component {
 
  <footer >
    <div >
-    <div  className="row">
-  <div className="col-3">
-    <p class="bg-light text-dark" align="center">Latest Updaete</p>
-  </div>
-  <div className="col-3">
-  <p align="center">Company</p>
-  </div>
-  <div className="col-3">
-  <p align="center">Contact Us</p>
-  </div>
-  <div className="col-3">
-  <p>Connect with us</p>
-  </div>
-</div >
+    
 
 <img src={footerimg} width="100%" height="60%"/>
 <div className="footerclass"><p  align="center">Copyright @2017 |  Venefly All rights reserved</p></div>
