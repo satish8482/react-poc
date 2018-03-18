@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.df0410e3.css",
   "main.css.map": "static/css/main.df0410e3.css.map",
-  "main.js": "static/js/main.47be35af.js",
-  "main.js.map": "static/js/main.47be35af.js.map",
+  "main.js": "static/js/main.1ac6c502.js",
+  "main.js.map": "static/js/main.1ac6c502.js.map",
   "static/media/Bangalore.png": "static/media/Bangalore.252b83e1.png",
   "static/media/Birthdayhall.png": "static/media/Birthdayhall.15fcaa31.png",
   "static/media/annualdinners.png": "static/media/annualdinners.a440bd40.png",
@@ -18,6 +18,7 @@
   "static/media/pune.png": "static/media/pune.d1e1350a.png",
   "static/media/rightarrow.png": "static/media/rightarrow.a546514e.png",
   "static/media/services-sprite.png": "static/media/services-sprite.72db46ad.png",
+  "static/media/theme.less": "static/media/theme.c357bb61.less",
   "static/media/venue6.jpg": "static/media/venue6.4ee2bf53.jpg",
   "static/media/venuefive.png": "static/media/venuefive.8d46ccd2.png",
   "static/media/venuefour.png": "static/media/venuefour.317309fc.png",

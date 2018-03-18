@@ -1,4 +1,11 @@
 import React from "react"
+import {
+  Route,
+  NavLink,
+  BrowserRouter as Router,
+  Link,
+  HashRouter
+} from "react-router-dom";
 import DocumentTitle from "react-document-title"
 import {Component} from "./components/component"
 import TextHolder from "./components/textholder"
@@ -29,8 +36,11 @@ import logo from "./images/logo.png"
 import footerimg from "./images/footerimg.png"
 import services from "./images/services-sprite.png"
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import "./less/theme.less"
 import "./App.css";
-
+import City1 from "./pages/City1"
+import City2 from "./pages/City2"
+import Home from "./pages/Home"
 const JSON = {
   image1 : {
     type: 'MQ Palace Function Hall',
@@ -118,7 +128,7 @@ export default class App extends Component {
   render() {
     return (
       <div >
-      <Menu></Menu>
+     
       <header className="App-header" ><img className="marginclass" src={logo} height="80%"/>
       <div id = "header">
        <ul>
@@ -136,18 +146,27 @@ export default class App extends Component {
          <div className="cities">
         <center>
          <h3>Discoveries in Cities</h3>
-         <a href=""><img src={leftarrow} width="30" height="160"/></a>
-        <a href=""><img src={ban} width="160" height="160"/></a>
-        <a href=""><img src={hyd} width="160" height="160"/></a>
-        <a href=""><img src={delhi} width="160" height="160"/></a>
-        <a href=""><img src={chen} width="160" height="160"/></a>
-        <a href=""><img src={mumbai} width="160" height="160"/></a>
-        <a href=""><img src={pune} width="160" height="160"/></a>
-        <a href=""><img src={rightarrow} width="30" height="160"/></a>
-        </center>
+         <hr/>
+         <Router>
+           <div>
+        <Link to="/"><img src={leftarrow} width="30" height="160"/></Link>
+         
+        <Link to="/City1"><img src={ban} width="160" height="160"/></Link>
+        <Link to="/City2"><img src={hyd} width="160" height="160"/></Link>
+        
+        <Route exact path="/" component={Home} />
+        <Route exact path="/City2" component={City2} />
+        <Route exact path="/City1" component={City1} />
         </div>
+        </Router>
+        </center>
+       
+        </div>
+       
+
         <div className="venueclass">
         <center><h3 className="venuecolor">VENUES</h3></center>
+        
         <div className="row">
           
 
@@ -208,6 +227,7 @@ export default class App extends Component {
      </div>
      <center>
      <h3>Popular Services</h3>
+     <hr/>
      </center>
      <div className="popularserviceclass">
        {Object.keys(JSON).map(key=>(
@@ -233,7 +253,11 @@ export default class App extends Component {
      </footer>
     </div>
     
+    
     )
   }
 }
+
 <link href="carousal.css" rel="stylesheet"/>
+
+
