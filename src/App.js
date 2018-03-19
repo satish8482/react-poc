@@ -40,6 +40,10 @@ import "./less/theme.less"
 import "./App.css";
 import City1 from "./pages/City1"
 import City2 from "./pages/City2"
+import City3 from "./pages/City3"
+import City4 from "./pages/City4"
+import City5 from "./pages/City5"
+import City6 from "./pages/City6"
 import Home from "./pages/Home"
 const JSON = {
   image1 : {
@@ -153,10 +157,16 @@ export default class App extends Component {
          
         <Link to="/City1"><img src={ban} width="160" height="160"/></Link>
         <Link to="/City2"><img src={hyd} width="160" height="160"/></Link>
-        
+        <Link to="/City3"><img src={chen} width="160" height="160"/></Link>
+        <Link to="/City4"><img src={mumbai} width="160" height="160"/></Link>
+        <Link to="/City5"><img src={pune} width="160" height="160"/></Link>
+        <Link to="/City6"><img src={delhi} width="160" height="160"/></Link>
+        <Link to="/"><img src={rightarrow} width="30" height="160"/></Link>
+
         <Route exact path="/" component={Home} />
-        <Route exact path="/City2" component={City2} />
         <Route exact path="/City1" component={City1} />
+        <Route exact path="/City2" component={City2} />
+        
         </div>
         </Router>
         </center>
